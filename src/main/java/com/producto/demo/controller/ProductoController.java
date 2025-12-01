@@ -47,5 +47,10 @@ public class ProductoController {
         ProductoDto actualizado = productoService.actualizar(productoDto);
         return ResponseEntity.ok(actualizado);
     }
+    
+    @PostMapping("/test")
+    public ResponseEntity<String> test() {
+        return new ResponseEntity<>("Test Exitoso", HttpStatus.CREATED);
+    }
 
 }
