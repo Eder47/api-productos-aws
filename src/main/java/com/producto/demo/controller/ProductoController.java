@@ -48,9 +48,14 @@ public class ProductoController {
         return ResponseEntity.ok(actualizado);
     }
     
-    @PostMapping("/test")
+    @GetMapping("/test-1")
     public ResponseEntity<String> test() {
-        return new ResponseEntity<>("Test Exitoso", HttpStatus.CREATED);
+        return new ResponseEntity<>("Test Exitoso 1", HttpStatus.CREATED);
+    }
+    
+    @GetMapping("/test-2")
+    public ResponseEntity<String> testTest() {
+        return new ResponseEntity<>("Test Exitoso 2", HttpStatus.CREATED);
     }
 
 }
